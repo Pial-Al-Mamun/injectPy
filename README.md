@@ -12,7 +12,7 @@ It helps you write cleaner, more testable code by automatically wiring up depend
 
 ### How it works
 
-To use it you have to use the ```python @service" ``` decorator in a service class to register the dependency
+To use it you have to use the ```python @service ``` decorator in a service class to register the dependency
 
 ```python
 from injectpy import service
