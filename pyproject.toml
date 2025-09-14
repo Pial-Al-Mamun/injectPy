@@ -1,7 +1,7 @@
 [project]
 name = "injectpy"
 version = "0.1.0"
-description = "Add your description here"
+description = "Minimal python dependency inject library"
 readme = "README.md"
 authors = [
     { name = "Pial-Al-Mamun", email = "pialalmamun99@gmail.com" }

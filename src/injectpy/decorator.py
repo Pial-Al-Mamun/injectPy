@@ -1,13 +1,13 @@
 import inspect
 from functools import wraps
 from ._container import Container
-
+from typing import Callable, Any
 
 def service(cls):
     return Container.register(cls)
 
 
-def inject(init_func):
+def inject(init_func:Callable[..., Any]):
     """
     Decorator to automatically inject dependencies into a class constructor.
 
@@ -26,7 +26,7 @@ def inject(init_func):
     - A wrapped __init__ method that automatically injects dependencies.
     """
     sig = inspect.signature(init_func)
-
+    
     @wraps(init_func)
     def wrapper(self, *args, **kwargs):
         for name, param in sig.parameters.items():
